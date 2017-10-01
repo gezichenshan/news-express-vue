@@ -2,16 +2,19 @@
   <div id="logo-container">
     <!-- <img src="./assets/logo.png"> -->
     <news-item v-for="item in newsList" track-by="$index" :item='item' :client-width='clientWidth' />
+    <Loading v-if="loading"/>
   </div>
 </template>
 
 <script>
 let clientWidth = document.documentElement.clientWidth
 import NewsItem from './NewsItem'
+import Loading from './Loading'
 export default {
   name: 'app',
   props: [
 　　'newsList',
+    'loading'
 　],
   data:function(){
     return {
@@ -19,7 +22,8 @@ export default {
     }
   },
   components: {
-　  'news-item': NewsItem
+　  'news-item': NewsItem,
+    'Loading': Loading
 　}
 }
 </script>

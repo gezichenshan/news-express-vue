@@ -1,5 +1,5 @@
 <template>
-  <div class="item-container" @click="doThis(item.link,$event)" :style="{ width: clientWidth-20 + 'px',maxWidth:500+'px' }">
+  <div class="item-container" @click="doThis(item.link,$event)" :style="{ width: clientWidth-20 + 'px',maxWidth:640+'px' }">
     <div>
       <h3 v-html="item.title" class="item-title"></h3>
     </div>
@@ -36,9 +36,7 @@ export default {
 　],
   methods:{
     doThis:function(link,event){
-      // $.get(link,function(data,status){
-      //   console.log(data)
-      // })
+      window.open(link)
     }
   }
   
@@ -53,7 +51,7 @@ export default {
     cursor: pointer;
   }
   .item-container{
-    height: 320px;
+    /*height: 320px;*/
     margin-top: 5px;
     float: left;
     list-style: none;
@@ -77,8 +75,8 @@ export default {
     -o-transition:box-shadow 0.4s; /* Opera */
   }
   .item-container:hover{
-    -webkit-box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, .1);
+    -webkit-box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, .1);
     cursor: pointer;
   }
   .item-title{
