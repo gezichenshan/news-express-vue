@@ -7,7 +7,6 @@
 
 ``` bash
 #clone the repository
-
 git clone https://github.com/gezichenshan/news-express-vue.git
 
 cd news-express-vue
