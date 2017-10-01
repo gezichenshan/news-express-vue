@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-## Build Setup
+## run
 
 
 ``` bash
