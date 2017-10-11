@@ -36,7 +36,23 @@ export default {
 　],
   methods:{
     doThis:function(link,event){
-      window.open(link)
+        $.ajax({  
+             type: "get",  
+             async: true,  
+             url: link,  
+             dataType: "jsonp",
+             jsonp:"callback",  
+             jsonpCallback:"success_jsonpCallback",
+             success: function(data){
+             },  
+             error: function(data){//始终会出现error，因为json格式有错误，但是如果网站可以访问，则status==200，不能则status==404,据此作出error-handling
+                if(data.status==200){
+                  window.location.href=link
+                }else if(data.status==404){
+                  alert('网页已过期')
+                }
+             }  
+        });
     }
   }
   
