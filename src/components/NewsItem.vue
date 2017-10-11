@@ -45,7 +45,7 @@ export default {
              jsonpCallback:"success_jsonpCallback",
              success: function(data){
              },  
-             error: function(data){//始终会出现error，因为json格式有错误，但是如果网站可以访问，则status==200，不能则status==404,据此作出error-handling
+             error: function(data){//因为服务器端没法做配合，由于json格式有误所以始终会出现error，但是如果网站可以访问，则status==200，不能则status==404,据此作出error-handling
                 if(data.status==200){
                   window.location.href=link
                 }else if(data.status==404){
