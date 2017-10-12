@@ -1,5 +1,5 @@
 <template>
-  <div class="item-container" @click="doThis(item.link,$event)" :style="{ width: clientWidth-20 + 'px',maxWidth:640+'px' }">
+  <div class="item-container" @click="doThis(item.link,$event)">
     <div>
       <h3 v-html="item.title" class="item-title"></h3>
     </div>
@@ -67,6 +67,8 @@ export default {
     cursor: pointer;
   }
   .item-container{
+    width:calc(100% - 20px);
+    max-width: 640px;
     /*height: 320px;*/
     margin-top: 5px;
     float: left;
