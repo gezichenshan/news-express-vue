@@ -33,7 +33,7 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  margin:5px auto;
+  margin:6px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
